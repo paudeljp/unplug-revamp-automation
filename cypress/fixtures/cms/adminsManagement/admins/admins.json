@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "environment": "faker",
+      "firstName": "Bud",
+      "lastName": "Runolfsson",
+      "email": "Funk56@mailinator.com",
+      "contact_number": "9868137127",
+      "password": "Admin@12345",
+      "image": "../file/cms/5144490.jpg",
+      "about": "Dolore dolor similique nostrum unde amet.",
+      "role": "Customer Support",
+      "status": "1",
+      "staff_status": "1",
+      "send_notification_by": "email"
+    },
+    {
+      "environment": "main",
+      "firstName": "Bud",
+      "lastName": "Runolfsson",
+      "email": "Funk56@mailinator.com",
+      "contact_number": "9868137127",
+      "password": "Admin@12345",
+      "image": "../file/cms/5144490.jpg",
+      "about": "Dolore dolor similique nostrum unde amet.",
+      "role": "Customer Support",
+      "status": "1",
+      "staff_status": "1",
+      "send_notification_by": "email"
+    }
+  ]
+}

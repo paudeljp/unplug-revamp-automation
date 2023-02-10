@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "environment": "faker",
+      "title": "input",
+      "start_date": "02/06/2023",
+      "end_date": "02/06/2023",
+      "thumbnailImage": "../../../file/cms/5144490.jpg",
+      "link": "input",
+      "description": "input asasasa"
+    },
+    {
+      "environment": "main",
+      "title": "input",
+      "start_date": "02/06/2023",
+      "end_date": "02/06/2023",
+      "thumbnailImage": "../../../file/cms/5144490.jpg",
+      "link": "input",
+      "description": "input asasasas"
+    }
+  ]
+}

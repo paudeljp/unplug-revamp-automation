@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "environment": "faker",
+      "coupon_name": "Sloane Downs",
+      "number_of_coupon": "45",
+      "percentage_off": "14",
+      "maximum_redemption": "14",
+      "coupon_expiry_date": "02/07/2023",
+      "plan": "Yearly",
+      "duration": "Forever"
+    },
+    {
+      "environment": "main",
+      "coupon_name": "Sloane Downs",
+      "number_of_coupon": "45",
+      "percentage_off": "14",
+      "maximum_redemption": "14",
+      "coupon_expiry_date": "02/07/2023",
+      "plan": "Yearly",
+      "duration": "Forever"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "environment": "faker",
+      "coupon_name": "1675996704846 coupon name",
+      "coupon_code": "X0D0E953",
+      "percentage_off": 31,
+      "maximum_redemption": 75,
+      "coupon_expiry_date": "02102023",
+      "plan": "Yearly",
+      "duration": "Forever",
+      "discount": "percent",
+      "number_of_coupon": 16
+    },
+    {
+      "environment": "main",
+      "coupon_name": "X0D0E953",
+      "coupon_code": "X0D0E953",
+      "percentage_off": 31,
+      "maximum_redemption": 75,
+      "coupon_expiry_date": "02102023",
+      "plan": "Yearly",
+      "duration": "Forever",
+      "discount": "percent",
+      "number_of_coupon": 16
+    }
+  ]
+}

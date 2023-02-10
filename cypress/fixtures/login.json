@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "environment": "dev",
+      "email": "admin@admin.com",
+      "password": "123Admin@",
+      "rememberMe": true
+    },
+
+    {
+      "environment": "uat",
+      "email": "",
+      "password": "",
+      "rememberMe": true
+    },
+    {
+      "environment": "qa",
+      "email": "",
+      "password": "",
+      "rememberMe": true
+    },
+    {
+      "environment": "invalid",
+      "email": "admin@admin@admin.com",
+      "password": "admin@admin",
+      "rememberMe": true
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "environment": "faker",
+      "company_name": "Ray and Collins Traders",
+      "company_promo_code": "AAAA21455",
+      "team_name": "input",
+      "team_email": "pyjynewel@mailinator.com",
+      "maximum_redemptions": "input",
+      "coupon_expiry_date": "input",
+      "plan": "Yearly",
+      "duration": "Forever",
+      "total_payment_received": "36"
+    },
+    {
+      "environmet": "main",
+      "company_name": "Ray and Collins Traders",
+      "company_promo_code": "AAAA21455",
+      "team_name": "input",
+      "team_email": "pyjynewel@mailinator.com",
+      "maximum_redemptions": "input",
+      "coupon_expiry_date": "input",
+      "plan": "Yearly",
+      "duration": "Forever",
+      "total_payment_received": "36"
+    }
+  ]
+}

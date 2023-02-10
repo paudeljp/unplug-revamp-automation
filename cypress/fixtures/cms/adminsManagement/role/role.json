@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "environment": "faker",
+      "name": "1675919715419 role",
+      "home": "home",
+      "analytics": "analytics",
+      "users": "users",
+      "admins": "admins",
+      "features": "features",
+      "featured_playlists": "featured-playlists",
+      "featured_pick": "featured-pick",
+      "promos": "promos",
+      "feelings": "feelings",
+      "journals": "journals",
+      "billing_plans": "billing-plans",
+      "videos": "videos",
+      "timer_sound": "timer-sounds",
+      "audio_tracks": "audio-tracks",
+      "newseletter": "newsletter"
+    },
+    {
+      "environment": "main",
+      "name": "1675919715419 role",
+      "home": "home",
+      "analytics": "analytics",
+      "users": "users",
+      "admins": "admins",
+      "features": "features",
+      "featured_playlists": "featured-playlists",
+      "featured_pick": "featured-pick",
+      "promos": "promos",
+      "feelings": "feelings",
+      "journals": "journals",
+      "billing_plans": "billing-plans",
+      "videos": "videos",
+      "timer_sound": "timer-sounds",
+      "audio_tracks": "audio-tracks",
+      "newseletter": "newsletter"
+    }
+  ]
+}

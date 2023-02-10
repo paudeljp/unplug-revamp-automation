@@ -1,5 +1,5 @@
 const { defineConfig } = require("cypress");
-const fs = require('fs')
+const fs = require("fs");
 
 module.exports = defineConfig({
   e2e: {
@@ -12,11 +12,11 @@ module.exports = defineConfig({
           return false;
         },
       });
-      on('task', {
+      on("task", {
         downloads: (downloadspath) => {
-          return fs.readdirSync(downloadspath)
-        }
-      })
+          return fs.readdirSync(downloadspath);
+        },
+      });
     },
     projectId: "",
     chromeWebSecurity: false,
@@ -27,31 +27,28 @@ module.exports = defineConfig({
     defaultCommandTimeout: 60000,
     responseTimeout: 60000,
     requestTimeout: 60000,
-    pageLoadTimeout:60000,
-    specPattern:"**/e2e/**/cms/**/*.cy.js",
-    // excludeSpecPattern:[
-    //   "**/e2e/**/cms/**/*.cy.js"
-    // ]
+    pageLoadTimeout: 60000,
+    excludeSpecPattern: [".txt"],
   },
   env: {
-    MAILSLURP_API_KEY: "",
+    MAILSLURP_API_KEY:
+      "d5a5488878a9995d799e9ca215845e2ecd42e5e67cf6d91d0a7d0c9981f8b558",
     dev: {
       cmsURL: "",
       mainApiURL: "",
-      cmsApiURL: ""
+      cmsApiURL: "",
     },
-    "uat": {
+    uat: {
       cmsURL: "",
       mainApiURL: "",
-      cmsApiURL: ""
+      cmsApiURL: "",
     },
-    "qa": {
+    qa: {
       cmsURL: "",
       mainApiURL: "",
-      cmsApiURL: ""
+      cmsApiURL: "",
     },
     testingEnv: "uat",
-    model: {
-    }
-  }
+    model: {},
+  },
 });

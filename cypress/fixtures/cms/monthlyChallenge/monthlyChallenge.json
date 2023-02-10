@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "environment": "faker",
+      "year": "2023",
+      "month": "January",
+      "playlist": "Get Inspired"
+    },
+    {
+      "environment": "main",
+      "year": "2023",
+      "month": "January",
+      "playlist": "Get Inspired"
+    }
+  ]
+}

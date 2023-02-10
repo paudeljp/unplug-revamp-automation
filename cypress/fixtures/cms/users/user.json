@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "environment": "main",
+      "email": "anil@gmail.com",
+      "username": "anil",
+      "joinDate": "02/03/2023 - 02/10/2023",
+      "status": "Active",
+      "VIP_status": "VIP",
+      "company": "admin",
+      "platform": "Apple",
+      "subscription_status": "Active",
+      "sessions_count_minimum": "1",
+      "sessions_count_maximun": "10"
+    }
+  ]
+}

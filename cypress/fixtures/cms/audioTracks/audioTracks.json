@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "environment": "faker",
+      "name": "1675924807879 audio track",
+      "position": 24,
+      "uploadAudioTrackFile1": "../file/cms/file_example_WAV_1MG.wav",
+      "uploadAudioTrackFile2": "../file/cms/file_example_WAV_1MG.wav"
+    },
+    {
+      "environment": "main",
+      "name": "1675924807879 audio track",
+      "position": 24,
+      "uploadAudioTrackFile1": "../file/cms/file_example_WAV_1MG.wav",
+      "uploadAudioTrackFile2": "../file/cms/file_example_WAV_1MG.wav"
+    }
+  ]
+}
