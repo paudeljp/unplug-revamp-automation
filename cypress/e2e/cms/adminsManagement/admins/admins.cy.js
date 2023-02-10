@@ -1,5 +1,7 @@
+import { getEnvVariables } from "../../../../helpers/environment";
+
 describe("Admins Module", () => {
   it("", () => {
-    cy.log("hi");
+    cy.visit(getEnvVariables("cmsURL"));
   });
 });
