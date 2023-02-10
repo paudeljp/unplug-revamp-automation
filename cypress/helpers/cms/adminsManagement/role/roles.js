@@ -406,7 +406,7 @@ export function button() {
   return {
     xpath: {
       mainTab: "ul#sidebarnav li a span",
-      subTab: "ul#sidebarnav li a span",
+      subTab: "ul#sidebarnav li ul .sidebar-item a span",
       addNew: "div.customize-input.float-right a[role='button']",
       edit: "tbody tr td a",
       delete: "tbody tr td button",
@@ -417,7 +417,7 @@ export function button() {
     },
     value: {
       mainTab: "Admins Management",
-      subTab: "Admins",
+      subTab: "Role",
       addNew: "Add New",
       edit: "Edit",
       delete: "Delete",

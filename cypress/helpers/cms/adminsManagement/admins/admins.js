@@ -454,7 +454,7 @@ export function button() {
   return {
     xpath: {
       mainTab: "ul#sidebarnav li a span",
-      subTab: "ul#sidebarnav li a span",
+      subTab: "ul#sidebarnav li ul .sidebar-item a span",
       addNew: "div.customize-input.float-right a",
       edit: "tbody tr td a.btn",
       changePassword: "tbody tr td a.btn",
@@ -467,7 +467,7 @@ export function button() {
     },
     value: {
       mainTab: "Admins Management",
-      subTab: "Role",
+      subTab: "Admins",
       addNew: "Add New",
       edit: "Edit",
       changePassword: "Change Password",

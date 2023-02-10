@@ -21,7 +21,7 @@
     },
     {
       "environment": "invalid",
-      "email": "admin@admin@admin.com",
+      "email": "admin@admi.com",
       "password": "admin@admin",
       "rememberMe": true
     }

@@ -3,7 +3,7 @@ export function loginForm() {
     field: {
       email: "input",
       password: "input",
-      keemMe: "checkBox",
+      keepMe: "checkBox",
     },
     status: {
       email: {
@@ -31,7 +31,7 @@ export function loginForm() {
     xpath: {
       email: "form input[name='username']",
       password: "form input[name='password']",
-      keemMe: "form input[name='remember_me']",
+      keepMe: "form input[name='remember_me']",
     },
   };
 }

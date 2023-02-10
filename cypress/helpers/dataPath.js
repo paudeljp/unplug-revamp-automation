@@ -1,5 +1,6 @@
 export function cmsDataPath() {
   return {
+    login: "cypress/fixtures/login.json",
     admins: "cypress/fixtures/cms/adminsManagement/admins/admins.json",
     role: "cypress/fixtures/cms/adminsManagement/role/role.json",
     audioTracks: "cypress/fixtures/cms/audioTracks/audioTracks.json",
