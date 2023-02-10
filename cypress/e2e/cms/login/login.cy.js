@@ -23,6 +23,11 @@ describe("Login Module", () => {
 
   it.only("Check Visibility", () => {
     formObj.checkFormStatusObj(loginModule.loginForm());
+
+    buttonObj.visibilityWithContainsObj(
+      loginModule.loginButton().xpath.signInBtn,
+      loginModule.loginButton().value.signInBtn
+    );
   });
 
   it("Invalid Login", () => {});
