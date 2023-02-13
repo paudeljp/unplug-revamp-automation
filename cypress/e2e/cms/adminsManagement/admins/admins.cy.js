@@ -107,7 +107,7 @@ describe("Admins Module", () => {
     );
   });
 
-  it.only("Check Visibility in Edit", () => {
+  it("Check Visibility in Edit", () => {
     tableObj.clickTableButtonObj(
       adminsModule.tableBody(),
       cmsDataPath().admins,

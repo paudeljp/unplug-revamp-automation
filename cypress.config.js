@@ -28,7 +28,6 @@ module.exports = defineConfig({
     responseTimeout: 60000,
     requestTimeout: 60000,
     pageLoadTimeout: 60000,
-    excludeSpecPattern: [".txt"],
 
     retries: {
       openMode: 0,

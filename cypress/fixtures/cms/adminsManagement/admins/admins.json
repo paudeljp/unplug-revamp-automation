@@ -2,33 +2,33 @@
   "data": [
     {
       "environment": "faker",
-      "firstName": "Tre",
-      "lastName": "Olson",
-      "email": "kuhic80@mailinator.com",
-      "contact_number": "9868589303",
+      "firstName": "Zackary",
+      "lastName": "Schowalter",
+      "email": "durgan76@mailinator.com",
+      "contact_number": "9868905876",
       "password": "Admin@12345",
       "image": "../file/cms/5144490.jpg",
-      "about": "Quas consequatur similique deserunt natus repellat aliquam harum amet laboriosam.",
+      "about": "Provident expedita adipisci officia voluptatum ad.",
       "role": "Customer Support",
       "status": "1",
       "staff_status": "1",
       "send_notification_by_email": "email",
-      "fullName": "Tre Olson"
+      "fullName": "Zackary Schowalter"
     },
     {
       "environment": "main",
-      "firstName": "Tre",
-      "lastName": "Olson",
-      "email": "kuhic80@mailinator.com",
-      "contact_number": "9868589303",
+      "firstName": "Zackary",
+      "lastName": "Schowalter",
+      "email": "durgan76@mailinator.com",
+      "contact_number": "9868905876",
       "password": "Admin@12345",
       "image": "../file/cms/5144490.jpg",
-      "about": "Quas consequatur similique deserunt natus repellat aliquam harum amet laboriosam.",
+      "about": "Provident expedita adipisci officia voluptatum ad.",
       "role": "Customer Support",
       "status": "1",
       "staff_status": "1",
       "send_notification_by_email": "email",
-      "fullName": "Tre Olson",
+      "fullName": "Zackary Schowalter",
       "status_active": "1"
     }
   ]
