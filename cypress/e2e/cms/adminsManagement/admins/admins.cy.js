@@ -125,12 +125,20 @@ describe("Admins Module", () => {
     );
 
     formObj.checkFormStatusObj(adminsModule.editForm());
+    formObj.compareFormDataObj(
+      adminsModule.editForm(),
+      cmsDataPath().admins,
+      "main"
+    );
 
-    // formObj.compareFormDataObj(
-    //   adminsModule.editForm(),
-    //   cmsDataPath().admins,
-    //   "main"
-    // );
+    buttonObj.visibilityWithContainsObj(
+      adminsModule.button().xpath.update,
+      adminsModule.button().value.update
+    );
+    buttonObj.visibilityWithContainsObj(
+      adminsModule.button().xpath.cancel,
+      adminsModule.button().value.cancel
+    );
   });
 
   it("Edit", () => {

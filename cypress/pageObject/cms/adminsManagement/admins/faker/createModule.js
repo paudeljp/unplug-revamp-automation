@@ -14,9 +14,7 @@ export function fakerObj(dataPath, string) {
           let lname = faker.name.lastName();
           datas.data[index].firstName = fname;
           datas.data[index].lastName = lname;
-
           datas.data[index].fullName = fname + " " + lname;
-
           datas.data[index].email =
             faker.name.lastName().toLowerCase() +
             faker.datatype.number({ min: 10, max: 99 }) +
@@ -48,8 +46,8 @@ export function storeObj(dataPath, string) {
         if (datas.data[index].environment == string) {
           datas.data[index].firstName = datas.data[0].firstName;
           datas.data[index].lastName = datas.data[0].lastName;
-          datas.data[index].email = datas.data[0].email;
           datas.data[index].fullName = datas.data[0].fullName;
+          datas.data[index].email = datas.data[0].email;
           datas.data[index].contact_number = datas.data[0].contact_number;
           datas.data[index].password = datas.data[0].password;
           datas.data[index].image = datas.data[0].image;

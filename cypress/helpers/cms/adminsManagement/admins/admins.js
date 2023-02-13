@@ -214,8 +214,8 @@ export function editForm() {
         readOnly: false,
       },
       password: {
-        isPresent: true,
-        visibility: true,
+        isPresent: false,
+        visibility: false,
         disabled: false,
         compare: false,
         readOnly: false,
@@ -238,14 +238,15 @@ export function editForm() {
         isPresent: true,
         visibility: true,
         disabled: false,
-        compare: true,
+        compare: false,
         readOnly: false,
       },
+
       status: {
         isPresent: true,
         visibility: true,
         disabled: false,
-        compare: false,
+        compare: true,
         readOnly: false,
       },
 
@@ -253,15 +254,15 @@ export function editForm() {
         isPresent: true,
         visibility: true,
         disabled: false,
-        compare: false,
+        compare: true,
         readOnly: false,
       },
 
-      send_notification_by: {
+      send_notification_by_email: {
         isPresent: true,
         visibility: true,
         disabled: false,
-        compare: false,
+        compare: true,
         readOnly: false,
       },
     },
@@ -270,7 +271,7 @@ export function editForm() {
       lastName: "input[name='last_name']",
       email: "input[name='email']",
       contact_number: "input[name='contactNumber']",
-      pasword: "input[name='password']",
+      password: "input[name='password']",
       image: "input[name='image']",
       about: "textarea[name='about']",
       role: "select[name='role_id']",
