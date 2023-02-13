@@ -6,13 +6,13 @@ export function singleStripePromoFakerObj(dataPath, string) {
   let yyyy = date.getFullYear();
   let mm = (date.getMonth() + 1).toString().padStart(2, 0);
   let dd = date.getDate().toString().padStart(2, 0);
-  cy.checkFileExists(dataPath, (err, datas) => {
+  cy.checkAndReadFile(dataPath, (err, datas) => {
     if (err) {
       return cy.log(err);
     }
   }).then((datas) => {
-    for (let index = 0; index < datas.length; index++) {
-      if ((datas.data[index].environment = string)) {
+    for (let index = 0; index < datas.data.length; index++) {
+      if (datas.data[index].environment == string) {
         datas.data[index].coupon_name = Date.now() + " coupon name";
         datas.data[index].coupon_code = faker.random
           .alphaNumeric(8)
@@ -41,13 +41,13 @@ export function multipleStripePromoFakerObj(dataPath, string) {
   let yyyy = date.getFullYear();
   let mm = (date.getMonth() + 1).toString().padStart(2, 0);
   let dd = date.getDate().toString().padStart(2, 0);
-  cy.checkFileExists(dataPath, (err, datas) => {
+  cy.checkAndReadFile(dataPath, (err, datas) => {
     if (err) {
       return cy.log(err);
     }
   }).then((datas) => {
-    for (let index = 0; index < datas.length; index++) {
-      if ((datas.data[index].environment = string)) {
+    for (let index = 0; index < datas.data.length; index++) {
+      if (datas.data[index].environment == string) {
         datas.data[index].coupon_name = Date.now() + " coupon name";
         datas.data[index].number_of_coupon = faker.datatype.number({
           min: 10,
@@ -77,13 +77,13 @@ export function teamPromoFakerObj(dataPath, string) {
   let yyyy = date.getFullYear();
   let mm = (date.getMonth() + 1).toString().padStart(2, 0);
   let dd = date.getDate().toString().padStart(2, 0);
-  cy.checkFileExists(dataPath, (err, datas) => {
+  cy.checkAndReadFile(dataPath, (err, datas) => {
     if (err) {
       return cy.log(err);
     }
   }).then((datas) => {
-    for (let index = 0; index < datas.length; index++) {
-      if ((datas.data[index].environment = string)) {
+    for (let index = 0; index < datas.data.length; index++) {
+      if (datas.data[index].environment == string) {
         datas.data[index].company_name = Date.now() + " Pvt Ltd";
 
         datas.data[index].company_promo_code = faker.random
@@ -112,18 +112,18 @@ export function teamPromoFakerObj(dataPath, string) {
     }
   });
 }
-//Object
+// Store Object
 
 export function singleStripePromoStoreObj(dataPath, string) {
-  cy.checkFileExists(dataPath, (err, datas) => {
+  cy.checkAndReadFile(dataPath, (err, datas) => {
     if (err) {
       return cy.log(err);
     }
   }).then((datas) => {
-    for (let index = 0; index < datas.length; index++) {
-      if ((datas.data[index].environment = string)) {
+    for (let index = 0; index < datas.data.length; index++) {
+      if (datas.data[index].environment == string) {
         datas.data[index].coupon_name = datas.data[0].coupon_name;
-        datas.data[index].coupon_code = dataPath.data[0].coupon_code;
+        datas.data[index].coupon_code = datas.data[0].coupon_code;
         datas.data[index].discount = datas.data[0].discount;
         datas.data[index].percentage_off = datas.data[0].percentage_off;
         datas.data[index].maximum_redemption = datas.data[0].maximum_redemption;
@@ -137,13 +137,13 @@ export function singleStripePromoStoreObj(dataPath, string) {
 }
 
 export function multipleStripePromoStoreObj(dataPath, string) {
-  cy.checkFileExists(dataPath, (err, datas) => {
+  cy.checkAndReadFile(dataPath, (err, datas) => {
     if (err) {
       return cy.log(err);
     }
   }).then((datas) => {
-    for (let index = 0; index < datas.length; index++) {
-      if ((datas.data[index].environment = string)) {
+    for (let index = 0; index < datas.data.length; index++) {
+      if (datas.data[index].environment == string) {
         datas.data[index].coupon_name = datas.data[0].coupon_code;
         datas.data[index].number_of_coupon = datas.data[0].number_of_coupon;
 
@@ -159,13 +159,13 @@ export function multipleStripePromoStoreObj(dataPath, string) {
 }
 
 export function teamPromoStoreObj(dataPath, string) {
-  cy.checkFileExists(dataPath, (err, datas) => {
+  cy.checkAndReadFile(dataPath, (err, datas) => {
     if (err) {
       return cy.log(err);
     }
   }).then((datas) => {
-    for (let index = 0; index < datas.length; index++) {
-      if ((datas.data[index].environment = string)) {
+    for (let index = 0; index < datas.data.length; index++) {
+      if (datas.data[index].environment == string) {
         datas.data[index].company_name = datas.data[0].company_name;
         datas.data[index].company_promo_code = datas.data[0].company_promo_code;
         datas.data[index].team_name = datas.data[0].team_name;

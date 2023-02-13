@@ -7,7 +7,7 @@ export function fakerObj(dataPath, string) {
     }
   })
     .then((datas) => {
-      for (let index = 0; index < datas.length; index++) {
+      for (let index = 0; index < datas.data.length; index++) {
         if (datas.data[index].environment == string) {
           datas.data[index].firstName = faker.name.firstName();
           datas.data[index].lastName = faker.name.lastName();
@@ -30,7 +30,6 @@ export function fakerObj(dataPath, string) {
     .wait(1000);
 }
 
-
 export function storeObj(dataPath, string) {
   cy.checkAndReadFile(dataPath, (err, datas) => {
     if (err) {
@@ -38,7 +37,7 @@ export function storeObj(dataPath, string) {
     }
   })
     .then((datas) => {
-      for (let index = 0; index < datas.length; index++) {
+      for (let index = 0; index < datas.data.length; index++) {
         if (datas.data[index].environment == string) {
           datas.data[index].firstName = datas.data[0].firstName;
           datas.data[index].lastName = datas.data[0].lastName;

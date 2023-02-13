@@ -12,7 +12,7 @@ export function fakerObj(dataPath, string) {
     }
   })
     .then((datas) => {
-      for (let index = 0; index < datas.length; index++) {
+      for (let index = 0; index < datas.data.length; index++) {
         if (datas.data[index].environment == string) {
           datas.data[index].title = Date.now() + " newsletter";
           datas.data[index].start_date = `${mm}${dd}${yyyy}`;
@@ -35,7 +35,7 @@ export function storeObj(dataPath, string) {
     }
   })
     .then((datas) => {
-      for (let index = 0; index < datas.length; index++) {
+      for (let index = 0; index < datas.data.length; index++) {
         if (datas.data[index].environment == string) {
           datas.data[index].title = datas.data[0].title;
           datas.data[index].start_date = datas.data[0].start_date;

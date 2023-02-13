@@ -30,8 +30,8 @@ export function storeObj(dataPath, string) {
           datas.data[index].company = "admin";
           datas.data[index].platform = "Apple";
           datas.data[index].subscription_status = "Active";
-          datas.data[index].sessions_count.minimum = "1";
-          datas.data[index].sessions_count.maximun = "10";
+          datas.data[index].sessions_count_minimum = "1";
+          datas.data[index].sessions_count_maximun = "10";
           cy.writeFile(dataPath, datas);
         }
       }

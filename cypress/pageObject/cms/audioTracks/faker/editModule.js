@@ -7,7 +7,7 @@ export function fakerObj(dataPath, string) {
     }
   })
     .then((datas) => {
-      for (let index = 0; index < datas.length; index++) {
+      for (let index = 0; index < datas.data.length; index++) {
         if (datas.data[index].environment == string) {
           datas.data[index].name = Date.now() + " audio track";
           datas.data[index].position = faker.datatype.number({
@@ -33,7 +33,7 @@ export function storeObj(dataPath, string) {
     }
   })
     .then((datas) => {
-      for (let index = 0; index < datas.length; index++) {
+      for (let index = 0; index < datas.data.length; index++) {
         if (datas.data[index].environment == string) {
           datas.data[index].firstName = datas.data[0].firstName;
 

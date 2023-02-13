@@ -24,7 +24,7 @@ export function fakerObj(dataPath, string) {
     }
   })
     .then((datas) => {
-      for (let index = 0; index < datas.length; index++) {
+      for (let index = 0; index < datas.data.length; index++) {
         if (datas.data[index].environment == string) {
           datas.data[index].year = new Date().getFullYear();
           datas.data[index].month = monthNames[d.getMonth()];
@@ -43,7 +43,7 @@ export function storeObj(dataPath, string) {
     }
   })
     .then((datas) => {
-      for (let index = 0; index < datas.length; index++) {
+      for (let index = 0; index < datas.data.length; index++) {
         if (datas.data[index].environment == string) {
           datas.data[index].select_category = datas.data[0].select_category;
 

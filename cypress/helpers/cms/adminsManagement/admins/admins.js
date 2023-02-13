@@ -22,18 +22,13 @@ export function createForm() {
       lastName: "input",
       email: "input",
       contact_number: "input",
-      pasword: "input",
+      password: "input",
       image: "fileUpload",
-      about: "textarea",
+      about: "textArea",
       role: "selectOption",
-
-      status_active: "radio",
-      status_inactive: "radio",
-
-      staff_status_is_staff: "radio",
-      staff_status_not_staff: "radio",
-
-      send_notification_by_email: "radio",
+      status: "radioOption",
+      staff_status: "radioOption",
+      send_notification_by_email: "radioOption",
     },
     status: {
       firstName: {
@@ -64,7 +59,7 @@ export function createForm() {
         compare: false,
         readOnly: false,
       },
-      pasword: {
+      password: {
         isPresent: true,
         visibility: true,
         disabled: false,
@@ -93,14 +88,7 @@ export function createForm() {
         readOnly: false,
       },
 
-      status_active: {
-        isPresent: true,
-        visibility: true,
-        disabled: false,
-        compare: false,
-        readOnly: false,
-      },
-      status_inactive: {
+      status: {
         isPresent: true,
         visibility: true,
         disabled: false,
@@ -108,14 +96,7 @@ export function createForm() {
         readOnly: false,
       },
 
-      staff_status_is_staff: {
-        isPresent: true,
-        visibility: true,
-        disabled: false,
-        compare: false,
-        readOnly: false,
-      },
-      staff_status_not_staff: {
+      staff_status: {
         isPresent: true,
         visibility: true,
         disabled: false,
@@ -136,15 +117,13 @@ export function createForm() {
       lastName: "input[name='last_name']",
       email: "input[name='email']",
       contact_number: "input[name='contactNumber']",
-      pasword: "input[name='password']",
+      password: "input[name='password']",
       image: "input[name='image']",
       about: "textarea[name='about']",
       role: "select[name='role_id']",
-      status_active: "div.card form label input[name='is_active']",
-      status_inactive: "div.card form label input[name='is_active']",
-      staff_status_is_staff: "div.card form label input[name='is_staff']",
-      staff_status_not_staff: "div.card form label input[name='is_staff']",
-      send_notification_by_email: "div.card form label input[value='email']",
+      status: "input[name='is_active']",
+      staff_status: "input[name='is_staff']",
+      send_notification_by_email: "input[value='email']",
     },
     validation: {
       firstName: [
@@ -165,7 +144,7 @@ export function createForm() {
       ],
       email: [{}],
       contact_number: "",
-      pasword: [
+      password: [
         {
           xpath: ".alert.alert-danger",
           value: null,
@@ -183,17 +162,9 @@ export function createForm() {
           requiresSubmit: true,
         },
       ],
-      status: {
-        active: "",
-        inactive: "",
-      },
-      staff_status: {
-        is_staff: "",
-        not_staff: "",
-      },
-      send_notification_by: {
-        email: "",
-      },
+      status: {},
+      staff_status: {},
+      send_notification_by: {},
     },
   };
 }
@@ -205,18 +176,13 @@ export function editForm() {
       lastName: "input",
       email: "input",
       contact_number: "input",
-      pasword: "input",
+      password: "input",
       image: "fileUpload",
-      about: "textarea",
+      about: "textArea",
       role: "selectOption",
-
-      status_active: "radio",
-      status_inactive: "radio",
-
-      status_is_staff: "radio",
-      status_not_staff: "radio",
-
-      send_notification_by_email: "radio",
+      status: "radioOption",
+      staff_status: "radioOption",
+      send_notification_by_email: "radioOption",
     },
     status: {
       firstName: {
@@ -276,45 +242,27 @@ export function editForm() {
         readOnly: false,
       },
       status: {
-        active: {
-          isPresent: true,
-          visibility: true,
-          disabled: false,
-          compare: false,
-          readOnly: false,
-        },
-        inactive: {
-          isPresent: true,
-          visibility: true,
-          disabled: false,
-          compare: false,
-          readOnly: false,
-        },
+        isPresent: true,
+        visibility: true,
+        disabled: false,
+        compare: false,
+        readOnly: false,
       },
+
       staff_status: {
-        is_staff: {
-          isPresent: true,
-          visibility: true,
-          disabled: false,
-          compare: false,
-          readOnly: false,
-        },
-        not_staff: {
-          isPresent: true,
-          visibility: true,
-          disabled: false,
-          compare: false,
-          readOnly: false,
-        },
+        isPresent: true,
+        visibility: true,
+        disabled: false,
+        compare: false,
+        readOnly: false,
       },
+
       send_notification_by: {
-        email: {
-          isPresent: true,
-          visibility: true,
-          disabled: false,
-          compare: false,
-          readOnly: false,
-        },
+        isPresent: true,
+        visibility: true,
+        disabled: false,
+        compare: false,
+        readOnly: false,
       },
     },
     xpath: {
@@ -326,11 +274,9 @@ export function editForm() {
       image: "input[name='image']",
       about: "textarea[name='about']",
       role: "select[name='role_id']",
-      status_active: "div.card form label input[name='is_active']",
-      status_inactive: "div.card form label input[name='is_active']",
-      staff_status_is_staff: "div.card form label input[name='is_staff']",
-      staff_status_not_staff: "div.card form label input[name='is_staff']",
-      send_notification_by_email: "div.card form label input[value='email']",
+      status: "input[name='is_active']",
+      staff_status: "input[name='is_staff']",
+      send_notification_by_email: "input[value='email']",
     },
     validation: {
       firstName: [{}],
@@ -341,17 +287,9 @@ export function editForm() {
       image: " ",
       about: "",
       role: [{}],
-      status: {
-        active: "",
-        inactive: "",
-      },
-      staff_status: {
-        is_staff: "",
-        not_staff: "",
-      },
-      send_notification_by: {
-        email: "",
-      },
+      status: {},
+      staff_status: {},
+      send_notification_by: {},
     },
   };
 }
@@ -501,9 +439,8 @@ export function tableBody() {
       "No Records found.",
     ],
     columns: {
-      2: "Full Name",
-      3: "Email",
-      4: "Role",
+      2: "fullName",
+      3: "email",
     },
     pagination: {
       disabled: "class",

@@ -7,7 +7,7 @@ export function fakerObj(dataPath, string) {
     }
   })
     .then((datas) => {
-      for (let index = 0; index < datas.length; index++) {
+      for (let index = 0; index < datas.data.length; index++) {
         if (datas.data[index].environment == string) {
           datas.data[index].name = Date.now() + " role";
           datas.data[index].home = "home";
@@ -39,14 +39,14 @@ export function storeObj(dataPath, string) {
     }
   })
     .then((datas) => {
-      for (let index = 0; index < datas.length; index++) {
+      for (let index = 0; index < datas.data.length; index++) {
         if (datas.data[index].environment == string) {
           datas.data[index].name = datas.data[0].name;
           datas.data[index].home = datas.data[0].home;
           datas.data[index].analytics = datas.data[0].analytics;
           datas.data[index].users = datas.data[0].users;
           datas.data[index].admins = datas.data[0].admins;
-          datas.data[index].features = datas.data[o].features;
+          datas.data[index].features = datas.data[0].features;
           datas.data[index].featured_playlists =
             datas.data[0].featured_playlists;
           datas.data[index].featured_pick = datas.data[0].featured_pick;

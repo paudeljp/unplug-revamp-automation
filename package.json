@@ -10,7 +10,8 @@
     "cy:generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
     "pretest": "npm run clean:reports && rm -rf cypress/screenshots && rm -rf cypress/videos",
     "posttest": "npm run cy:combine:reports && npm run cy:generate-report",
-    "cy:parallel": "npx cypress run --record --key 134ace6b-fe56-4516-8a6b-81ae4563b0e3 --parallel --group regression --ci-build-id $BUILD_IDS"
+    "cy:parallel": "npx cypress run --record --key 134ace6b-fe56-4516-8a6b-81ae4563b0e3 --parallel --group regression --ci-build-id $BUILD_IDS",
+    "cy:mattermost": "node --experimental-modules cypress/helpers/mattermost.mjs"
   },
   "repository": {
     "type": "git",
@@ -20,17 +21,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^12.5.1",
     "@faker-js/faker": "^7.6.0",
+    "cypress": "^12.5.1",
     "cypress-file-upload": "^5.0.8",
     "cypress-iframe": "^1.0.1",
     "cypress-localstorage-commands": "^2.2.1",
     "cypress-mailslurp": "^1.5.0"
   },
   "devDependencies": {
+    "dotenv": "^16.0.3",
     "mocha": "^10.0.0",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.2.1",
-    "mochawesome-report-generator": "^6.2.0"
+    "mochawesome-report-generator": "^6.2.0",
+    "node-fetch": "^3.3.0"
   }
 }
