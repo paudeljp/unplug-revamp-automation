@@ -26,17 +26,14 @@ export function createForm() {
       image: "fileUpload",
       about: "textarea",
       role: "selectOption",
-      status: {
-        active: "radio",
-        inactive: "radio",
-      },
-      staff_status: {
-        is_staff: "radio",
-        not_staff: "radio",
-      },
-      send_notification_by: {
-        email: "radio",
-      },
+
+      status_active: "radio",
+      status_inactive: "radio",
+
+      staff_status_is_staff: "radio",
+      staff_status_not_staff: "radio",
+
+      send_notification_by_email: "radio",
     },
     status: {
       firstName: {
@@ -95,46 +92,43 @@ export function createForm() {
         compare: false,
         readOnly: false,
       },
-      status: {
-        active: {
-          isPresent: true,
-          visibility: true,
-          disabled: false,
-          compare: false,
-          readOnly: false,
-        },
-        inactive: {
-          isPresent: true,
-          visibility: true,
-          disabled: false,
-          compare: false,
-          readOnly: false,
-        },
+
+      status_active: {
+        isPresent: true,
+        visibility: true,
+        disabled: false,
+        compare: false,
+        readOnly: false,
       },
-      staff_status: {
-        is_staff: {
-          isPresent: true,
-          visibility: true,
-          disabled: false,
-          compare: false,
-          readOnly: false,
-        },
-        not_staff: {
-          isPresent: true,
-          visibility: true,
-          disabled: false,
-          compare: false,
-          readOnly: false,
-        },
+      status_inactive: {
+        isPresent: true,
+        visibility: true,
+        disabled: false,
+        compare: false,
+        readOnly: false,
       },
-      send_notification_by: {
-        email: {
-          isPresent: true,
-          visibility: true,
-          disabled: false,
-          compare: false,
-          readOnly: false,
-        },
+
+      staff_status_is_staff: {
+        isPresent: true,
+        visibility: true,
+        disabled: false,
+        compare: false,
+        readOnly: false,
+      },
+      staff_status_not_staff: {
+        isPresent: true,
+        visibility: true,
+        disabled: false,
+        compare: false,
+        readOnly: false,
+      },
+
+      send_notification_by_email: {
+        isPresent: true,
+        visibility: true,
+        disabled: false,
+        compare: false,
+        readOnly: false,
       },
     },
     xpath: {
@@ -146,17 +140,11 @@ export function createForm() {
       image: "input[name='image']",
       about: "textarea[name='about']",
       role: "select[name='role_id']",
-      status: {
-        active: "div.card form label input[name='is_active']",
-        inactive: "div.card form label input[name='is_active']",
-      },
-      staff_status: {
-        is_staff: "div.card form label input[name='is_staff']",
-        not_staff: "div.card form label input[name='is_staff']",
-      },
-      send_notification_by: {
-        email: "div.card form label input[value='email']",
-      },
+      status_active: "div.card form label input[name='is_active']",
+      status_inactive: "div.card form label input[name='is_active']",
+      staff_status_is_staff: "div.card form label input[name='is_staff']",
+      staff_status_not_staff: "div.card form label input[name='is_staff']",
+      send_notification_by_email: "div.card form label input[value='email']",
     },
     validation: {
       firstName: [
@@ -221,17 +209,14 @@ export function editForm() {
       image: "fileUpload",
       about: "textarea",
       role: "selectOption",
-      status: {
-        active: "radio",
-        inactive: "radio",
-      },
-      staff_status: {
-        is_staff: "radio",
-        not_staff: "radio",
-      },
-      send_notification_by: {
-        email: "radio",
-      },
+
+      status_active: "radio",
+      status_inactive: "radio",
+
+      status_is_staff: "radio",
+      status_not_staff: "radio",
+
+      send_notification_by_email: "radio",
     },
     status: {
       firstName: {
@@ -341,17 +326,11 @@ export function editForm() {
       image: "input[name='image']",
       about: "textarea[name='about']",
       role: "select[name='role_id']",
-      status: {
-        active: "div.card form label input[name='is_active']",
-        inactive: "div.card form label input[name='is_active']",
-      },
-      staff_status: {
-        is_staff: "div.card form label input[name='is_staff']",
-        not_staff: "div.card form label input[name='is_staff']",
-      },
-      send_notification_by: {
-        email: "div.card form label input[value='email']",
-      },
+      status_active: "div.card form label input[name='is_active']",
+      status_inactive: "div.card form label input[name='is_active']",
+      staff_status_is_staff: "div.card form label input[name='is_staff']",
+      staff_status_not_staff: "div.card form label input[name='is_staff']",
+      send_notification_by_email: "div.card form label input[value='email']",
     },
     validation: {
       firstName: [{}],

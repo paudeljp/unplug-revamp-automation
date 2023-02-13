@@ -30,6 +30,11 @@ module.exports = defineConfig({
     pageLoadTimeout: 60000,
     excludeSpecPattern: [".txt"],
 
+    retries: {
+      openMode: 0,
+      runMode: 1,
+    },
+
     //report
     reporter: "mochawesome",
     reporterOptions: {

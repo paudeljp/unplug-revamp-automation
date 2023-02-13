@@ -16,3 +16,4 @@ screenshots/
 mochawesome-report/
 cypress/reports/
 cypress/screenshots
+index.js
