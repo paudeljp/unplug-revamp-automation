@@ -2,34 +2,36 @@
   "data": [
     {
       "environment": "faker",
-      "firstName": "Zackary",
-      "lastName": "Schowalter",
-      "email": "durgan76@mailinator.com",
-      "contact_number": "9868905876",
+      "firstName": "Mallie",
+      "lastName": "Daugherty",
+      "email": "nitzsche89@mailinator.com",
+      "contact_number": "9868382271",
       "password": "Admin@12345",
       "image": "../file/cms/5144490.jpg",
-      "about": "Provident expedita adipisci officia voluptatum ad.",
+      "about": "Laborum ratione totam.",
       "role": "Customer Support",
       "status": "1",
       "staff_status": "1",
       "send_notification_by_email": "email",
-      "fullName": "Zackary Schowalter"
+      "fullName": "Mallie Daugherty",
+      "send_notification_by": "email"
     },
     {
       "environment": "main",
-      "firstName": "Zackary",
-      "lastName": "Schowalter",
-      "email": "durgan76@mailinator.com",
-      "contact_number": "9868905876",
+      "firstName": "Mallie",
+      "lastName": "Daugherty",
+      "email": "nitzsche89@mailinator.com",
+      "contact_number": "9868382271",
       "password": "Admin@12345",
       "image": "../file/cms/5144490.jpg",
-      "about": "Provident expedita adipisci officia voluptatum ad.",
+      "about": "Laborum ratione totam.",
       "role": "Customer Support",
       "status": "1",
       "staff_status": "1",
       "send_notification_by_email": "email",
-      "fullName": "Zackary Schowalter",
-      "status_active": "1"
+      "fullName": "Mallie Daugherty",
+      "status_active": "1",
+      "send_notification_by": "email"
     }
   ]
 }

@@ -3,15 +3,16 @@
     {
       "environment": "faker",
       "select_featured_item": "John Vosler",
-      "start_date": "02092023",
-      "end_date": "02092023",
-      "select_category": "Teacher"
+      "start_date": "02/14/2023",
+      "end_date": "02/14/2023",
+      "select_category": "teacher"
     },
     {
       "environment": "main",
-      "select_featured_item": "Teacher",
-      "start_date": "02/03/2023",
-      "end_date": "02/03/2023"
+      "select_featured_item": "John Vosler",
+      "start_date": "02/14/2023",
+      "end_date": "02/14/2023",
+      "select_category": "teacher"
     }
   ]
 }

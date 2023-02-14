@@ -54,3 +54,9 @@ export function grabTextFromJsonObj(filePath, string, value) {
       return response.data;
     });
 }
+
+export function deleteConfirmModal(xpath, value) {
+  grabTextP.grabSingleText(xpath).then((response) => {
+    expect(response).to.equal(value.trim());
+  });
+}

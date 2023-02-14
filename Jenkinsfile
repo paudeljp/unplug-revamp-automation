@@ -12,7 +12,7 @@ pipeline {
   stages {
     stage("Start") {
       steps {
-        echo "Test from Chrome Browser start. Build id: $BUILD_IDS"
+        echo "Test from Electron  Browser start. Build id: $BUILD_IDS"
         sh 'node --version'
         sh 'npm ci'
         sh 'npm run cy:verify'

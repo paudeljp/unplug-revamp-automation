@@ -1,20 +1,19 @@
 //!Helpers
 import { cmsDataPath } from "../../../../helpers/dataPath";
-
 import * as loginModule from "../../../../helpers/cms/login";
 import * as adminsModule from "../../../../helpers/cms/adminsManagement/admins/admins";
 
 //!Common PageObject
-
 import * as buttonObj from "../../../../pageObject/common/buttonObj";
-import { loginWithSessionObj } from "../../../../pageObject/cms/login/loginObj";
 import * as visitObj from "../../../../pageObject/common/visitObj";
 import * as formObj from "../../../../pageObject/common/formObj";
 import * as grabTextObj from "../../../../pageObject/common/grabTextObj";
 import * as tableObj from "../../../../pageObject/common/tableObj";
-import * as createFakerObj from "../../../../pageObject/cms/adminsManagement/admins/faker/createModule";
 
+//!Required PageObject
+import * as createFakerObj from "../../../../pageObject/cms/adminsManagement/admins/faker/createModule";
 import * as editFakerObj from "../../../../pageObject/cms/adminsManagement/admins/faker/editModule";
+import { loginWithSessionObj } from "../../../../pageObject/cms/login/loginObj";
 
 describe("Admins Module", () => {
   before(() => {
@@ -39,8 +38,8 @@ describe("Admins Module", () => {
   it("Check Visibility in Main", () => {
     visitObj.verifyURLObj(adminsModule.urls().adminsPage);
     grabTextObj.comparePageTitleObj(
-      adminsModule.pageTile().xpath.mainPage,
-      adminsModule.pageTile().value.mainPage
+      adminsModule.pageTitle().xpath.mainPage,
+      adminsModule.pageTitle().value.mainPage
     );
 
     grabTextObj.compareTableHeadingObj(
@@ -55,8 +54,8 @@ describe("Admins Module", () => {
     );
     visitObj.verifyURLObj(adminsModule.urls().createPage);
     grabTextObj.comparePageTitleObj(
-      adminsModule.pageTile().xpath.createPage,
-      adminsModule.pageTile().value.createPage
+      adminsModule.pageTitle().xpath.createPage,
+      adminsModule.pageTitle().value.createPage
     );
 
     grabTextObj.compareBreadCrumbsObj(
@@ -116,8 +115,8 @@ describe("Admins Module", () => {
     );
 
     grabTextObj.comparePageTitleObj(
-      adminsModule.pageTile().xpath.editPage,
-      adminsModule.pageTile().value.editPage
+      adminsModule.pageTitle().xpath.editPage,
+      adminsModule.pageTitle().value.editPage
     );
     grabTextObj.compareBreadCrumbsObj(
       adminsModule.breadCrumbs().xpath.editPage,
@@ -147,6 +146,125 @@ describe("Admins Module", () => {
       cmsDataPath().admins,
       "main",
       "Edit"
+    );
+
+    editFakerObj.fakerObj(cmsDataPath().admins, "faker");
+    formObj.fillFormObj(adminsModule.editForm(), cmsDataPath().admins, "faker");
+    buttonObj.clickButtonWithContainsObj(
+      adminsModule.button().xpath.update,
+      adminsModule.button().value.update
+    );
+
+    grabTextObj.compareAlertMessageObj(
+      adminsModule.alertMessage().xpath.editAlert,
+      adminsModule.alertMessage().value.editAlert
+    );
+    editFakerObj.storeObj(cmsDataPath().admins, "main");
+
+    buttonObj.visibilityWithContainsObj(
+      adminsModule.button().xpath.update,
+      adminsModule.button().value.update
+    );
+    buttonObj.visibilityWithContainsObj(
+      adminsModule.button().xpath.cancel,
+      adminsModule.button().value.cancel
+    );
+  });
+
+  it("Check Visibility in Change Password", () => {
+    tableObj.clickTableButtonObj(
+      adminsModule.tableBody(),
+      cmsDataPath().admins,
+      "main",
+      "Change Password"
+    );
+
+    visitObj.verifyURLObj(adminsModule.urls().changePasswordPage);
+
+    grabTextObj.comparePageTitleObj(
+      adminsModule.pageTitle().xpath.changePassword,
+      adminsModule.pageTitle().value.changePassword
+    );
+
+    grabTextObj.compareBreadCrumbsObj(
+      adminsModule.breadCrumbs().xpath.changePassword,
+      adminsModule.breadCrumbs().value.changePassword
+    );
+
+    grabTextObj.compareTableHeadingObj(
+      adminsModule.changePasswordTableHead().xpath.head,
+      adminsModule.changePasswordTableHead().value.head
+    );
+
+    formObj.checkFormStatusObj(adminsModule.changePasswordForm());
+    buttonObj.visibilityWithContainsObj(
+      adminsModule.button().xpath.save,
+      adminsModule.button().value.save
+    );
+    buttonObj.visibilityWithContainsObj(
+      adminsModule.button().xpath.cancel,
+      adminsModule.button().value.cancel
+    );
+  });
+
+  it("Change Password", () => {
+    tableObj.clickTableButtonObj(
+      adminsModule.tableBody(),
+      cmsDataPath().admins,
+      "main",
+      "Change Password"
+    );
+
+    formObj.fillFormObj(
+      adminsModule.changePasswordForm(),
+      cmsDataPath().changePassowrd,
+      "main"
+    );
+
+    buttonObj.clickButtonWithContainsObj(
+      adminsModule.button().xpath.save,
+      adminsModule.button().value.save
+    );
+
+    grabTextObj.compareAlertMessageObj(
+      adminsModule.alertMessage().xpath.changePassword,
+      adminsModule.alertMessage().value.changePassword
+    );
+  });
+  it("Delete", () => {
+    tableObj.clickTableButtonObj(
+      adminsModule.tableBody(),
+      cmsDataPath().admins,
+      "main",
+      "Delete"
+    );
+
+    grabTextObj.deleteConfirmModal(
+      adminsModule.confirmModal().xpath.modalLable,
+      adminsModule.confirmModal().value.modalLable
+    );
+
+    grabTextObj.deleteConfirmModal(
+      adminsModule.confirmModal().xpath.modalDesc,
+      adminsModule.confirmModal().value.modalDesc
+    );
+
+    buttonObj.visibilityWithContainsObj(
+      adminsModule.button().xpath.confirm,
+      adminsModule.button().value.confirm
+    );
+    buttonObj.visibilityWithContainsObj(
+      adminsModule.button().xpath.close,
+      adminsModule.button().value.close
+    );
+
+    buttonObj.clickButtonWithContainsObj(
+      adminsModule.button().xpath.confirm,
+      adminsModule.button().value.confirm
+    );
+    grabTextObj.compareAlertMessageObj(
+      adminsModule.alertMessage().xpath.deleteAlert,
+      adminsModule.alertMessage().value.deleteAlert
     );
   });
 });

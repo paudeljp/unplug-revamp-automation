@@ -12,7 +12,7 @@ export function fakerObj(dataPath, string) {
           let fname = faker.name.firstName();
           let lname = faker.name.lastName();
           datas.data[index].firstName = fname;
-          datas.data[index].lastName = lastName;
+          datas.data[index].lastName = lname;
           datas.data[index].fullName = fname + " " + lname;
           datas.data[index].email =
             faker.name.lastName() +

@@ -1,4 +1,4 @@
-export function pageTile() {
+export function pageTitle() {
   return {
     xpath: {
       mainPage: "div.page-breadcrumb h3",
@@ -176,7 +176,6 @@ export function editForm() {
       lastName: "input",
       email: "input",
       contact_number: "input",
-      password: "input",
       image: "fileUpload",
       about: "textArea",
       role: "selectOption",
@@ -213,13 +212,7 @@ export function editForm() {
         compare: true,
         readOnly: false,
       },
-      password: {
-        isPresent: false,
-        visibility: false,
-        disabled: false,
-        compare: false,
-        readOnly: false,
-      },
+
       image: {
         isPresent: true,
         visibility: true,
@@ -271,7 +264,6 @@ export function editForm() {
       lastName: "input[name='last_name']",
       email: "input[name='email']",
       contact_number: "input[name='contactNumber']",
-      password: "input[name='password']",
       image: "input[name='image']",
       about: "textarea[name='about']",
       role: "select[name='role_id']",
@@ -318,8 +310,8 @@ export function changePasswordForm() {
       },
     },
     xpath: {
-      newPassword: "#newPassword",
-      confirmPassword: "#confirmPassword",
+      newPassword: "input[name='newPassword']",
+      confirmPassword: "input[name='confirmPassword']",
     },
     validation: {
       newPassword: [
@@ -417,7 +409,7 @@ export function urls() {
     homePage: "/home",
     adminsPage: "/admins",
     createPage: "/create",
-    changePasswordPage: ",changePassword",
+    changePasswordPage: "/changePassword",
   };
 }
 
@@ -471,6 +463,17 @@ export function breadCrumbs() {
       createPage: ["Admins", "Add Admin User"],
       editPage: ["Admins", "Edit CMS User"],
       changePassword: ["Admins", "Change Password"],
+    },
+  };
+}
+
+export function changePasswordTableHead(name, eamil) {
+  return {
+    xpath: {
+      head: "table tbody tr th",
+    },
+    value: {
+      head: ["Name", "Email"],
     },
   };
 }

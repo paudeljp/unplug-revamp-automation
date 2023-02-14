@@ -17,7 +17,20 @@
       "videos": "videos",
       "timer_sound": "timer-sounds",
       "audio_tracks": "audio-tracks",
-      "newseletter": "newsletter"
+      "newseletter": "newsletter",
+      "firstName": "Dorothy",
+      "lastName": "Kutch",
+      "fullName": "Dorothy Kutch",
+      "email": "Berge75@mailinator.com",
+      "contact_number": "9868693631",
+      "password": "Admin@12345",
+      "image": "../file/cms/5144490.jpg",
+      "about": "Voluptatibus culpa sint ipsum a.",
+      "role": "Customer Support",
+      "status": "1",
+      "staff_status": "1",
+      "send_notification_by_email": "email",
+      "send_notification_by": "email"
     },
     {
       "environment": "main",
@@ -36,7 +49,20 @@
       "videos": "videos",
       "timer_sound": "timer-sounds",
       "audio_tracks": "audio-tracks",
-      "newseletter": "newsletter"
+      "newseletter": "newsletter",
+      "firstName": "Dorothy",
+      "lastName": "Kutch",
+      "fullName": "Dorothy Kutch",
+      "email": "Berge75@mailinator.com",
+      "contact_number": "9868693631",
+      "password": "Admin@12345",
+      "image": "../file/cms/5144490.jpg",
+      "about": "Voluptatibus culpa sint ipsum a.",
+      "role": "Customer Support",
+      "status_active": "1",
+      "staff_status": "1",
+      "status": "1",
+      "send_notification_by": "email"
     }
   ]
 }

@@ -15,8 +15,8 @@ export function createForm() {
         readOnly: false,
       },
       select_featured_item: {
-        isPresent: true,
-        visibility: true,
+        isPresent: false,
+        visibility: false,
         disabled: false,
         compare: false,
         readOnly: false,
@@ -39,12 +39,12 @@ export function createForm() {
     xpath: {
       select_category: "select[id='category_select']",
       select_featured_item: [
-        "form span[title$='None']:last-child",
+        ".teacher > .select2-container > .selection > .select2-selection > #select2--container",
         "input[type='search']",
-        "ul.select2-results__options li",
+        "#select2--results li",
       ],
-      start_date: "input#start_date",
-      end_date: "input#end_date",
+      start_date: "input[name='start_date']",
+      end_date: "input[name='end_date']",
     },
     validation: {
       select_category: [
@@ -89,14 +89,14 @@ export function editForm() {
         isPresent: true,
         visibility: true,
         disabled: false,
-        compare: true,
+        compare: false,
         readOnly: false,
       },
       select_featured_item: {
-        isPresent: true,
-        visibility: true,
+        isPresent: false,
+        visibility: false,
         disabled: false,
-        compare: true,
+        compare: false,
         readOnly: false,
       },
       start_date: {
@@ -117,12 +117,12 @@ export function editForm() {
     xpath: {
       select_category: "select[id='category_select']",
       select_featured_item: [
-        "form span[title$='None']:last-child",
+        ".teacher > .select2-container > .selection > .select2-selection > .select2-selection__arrow",
         "input[type='search']",
         "ul.select2-results__options li",
       ],
-      start_date: "input#start_date",
-      end_date: "input#end_date",
+      start_date: "input[name='start_date']",
+      end_date: "input[name='end_date']",
     },
     validation: {
       select_category: [
@@ -222,24 +222,24 @@ export function tableBody() {
       "No Records found.",
     ],
     columns: {
-      2: "Category",
-      3: "Featured Item",
-      4: "Start Date",
-      5: "End Date",
+      2: "select_category",
+      3: "select_featured_item",
+      4: "start_date",
+      5: "end_date",
     },
     pagination: {
-      // disabled: "class",
-      // xpath: {
-      //   container: ".card-body",
-      //   paginationCount: ".custom-pagination:last-child ul li",
-      //   preview: "div.custom-pagination:last-child ul li:nth-last-child(2) a",
-      //   next: "div.custom-pagination:last-child ul li:nth-child(2) a",
-      // },
-      // value: {
-      //   container: null,
-      //   preview: "«",
-      //   next: "»",
-      // },
+      disabled: "class",
+      xpath: {
+        container: ".card-body",
+        paginationCount: ".custom-pagination:last-child ul li",
+        preview: "div.custom-pagination:last-child ul li:nth-last-child(2) a",
+        next: "div.custom-pagination:last-child ul li:nth-child(2) a",
+      },
+      value: {
+        container: null,
+        preview: "«",
+        next: "»",
+      },
     },
   };
 }
@@ -251,7 +251,7 @@ export function confirmModal() {
       modalDesc: "#generalModalDescription",
     },
     value: {
-      modalLable: "Confirm Delete Featured Video",
+      modalLable: "Confirm Delete featured-pick",
       modalDesc: "Are you sure?",
     },
   };

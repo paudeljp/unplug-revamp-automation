@@ -45,6 +45,7 @@ export function button() {
       replaceFilesBtn: "form  button.btn.replaceFileBtn",
       confirm: "div.modal-footer button:first-child",
       close: "div.modal-footer button:last-child",
+      tableData: "#audioTracksTbl tbody tr td:nth-child(2) a",
     },
     value: {
       mainTab: "Audio Tracks",
@@ -106,8 +107,7 @@ export function tableBody() {
     emptyTable: ["#audioTracksTbl  > tbody tr td", "No Records found."],
 
     columns: {
-      2: "Name",
-      3: "File",
+      2: "name",
     },
     pagination: {
       disabled: "class",

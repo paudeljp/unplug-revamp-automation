@@ -10,10 +10,7 @@ export function fakerObj(dataPath, string) {
       for (let index = 0; index < datas.data.length; index++) {
         if (datas.data[index].environment == string) {
           datas.data[index].name = Date.now() + " audio track";
-          datas.data[index].position = faker.datatype.number({
-            min: 10,
-            max: 99,
-          });
+          datas.data[index].position = "0";
 
           datas.data[index].uploadAudioTrackFile1 =
             "../file/cms/file_example_WAV_1MG.wav";

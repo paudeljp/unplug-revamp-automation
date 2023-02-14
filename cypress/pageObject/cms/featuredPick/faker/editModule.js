@@ -15,10 +15,10 @@ export function fakerObj(dataPath, string) {
     .then((datas) => {
       for (let index = 0; index < datas.data.length; index++) {
         if (datas.data[index].environment == string) {
-          datas.data[index].select_category = "Teacher";
+          datas.data[index].select_category = "Teacher".toLowerCase();
           datas.data[index].select_featured_item = "John Vosler";
-          datas.data[index].start_date = `${mm}${dd}${yyyy}`;
-          datas.data[index].end_date = `${mm}${dd}${yyyy}`;
+          datas.data[index].start_date = `${mm}/${dd}/${yyyy}`;
+          datas.data[index].end_date = `${mm}/${dd}/${yyyy}`;
           cy.writeFile(dataPath, datas);
         }
       }
