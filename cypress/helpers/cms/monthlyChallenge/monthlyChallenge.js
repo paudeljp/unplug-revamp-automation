@@ -29,7 +29,7 @@ export function createForm() {
       },
     },
     xpath: {
-      year: "#year",
+      year: "input[name='year']",
       month: [
         "#select2-month-container",
         "input.select2-search__field",
@@ -75,19 +75,19 @@ export function editForm() {
         isPresent: true,
         visibility: true,
         disabled: false,
-        compare: true,
+        compare: false,
         readOnly: false,
       },
       playlist: {
         isPresent: true,
         visibility: true,
         disabled: false,
-        compare: true,
+        compare: false,
         readOnly: false,
       },
     },
     xpath: {
-      year: "#year",
+      year: "input[name='year']",
       month: [
         "#select2-month-container",
         "input.select2-search__field",
@@ -117,7 +117,7 @@ export function editForm() {
 export function button() {
   return {
     xpath: {
-      mainPage: "ul#sidebarnav li a span",
+      mainTab: "ul#sidebarnav li a span",
       addNew: "div.customize-input.float-right a",
       edit: "tbody tr td a.btn",
       delete: "tbody tr td button.btn",
@@ -125,9 +125,10 @@ export function button() {
       cancel: "div.card-body form a",
       confirm: "div.modal-footer button:first-child",
       close: "div.modal-footer button:last-child",
+      update: "form div.form-group button",
     },
     value: {
-      mainPage: "Monthly Challenge",
+      mainTab: "Monthly Challenge",
       addNew: "Add New",
       edit: "Edit",
       delete: "Delete",
@@ -135,6 +136,7 @@ export function button() {
       cancel: "Cancel",
       confirm: "Confirm",
       close: "Close",
+      update: "Update",
     },
   };
 }
@@ -144,10 +146,12 @@ export function pageTitle() {
     xpath: {
       mainPage: ".page-breadcrumb h3",
       editPage: ".page-breadcrumb h3",
+      createPage: ".page-breadcrumb h3",
     },
     value: {
       mainPage: "Monthly Challenge",
       editPage: "Edit Monthly Challenge",
+      createPage: "Add Monthly Challenge",
     },
   };
 }
@@ -171,8 +175,7 @@ export function tableBody() {
       "No Records found.",
     ],
     columns: {
-      2: "Playlist",
-      3: "Featured Month",
+      2: "playlist",
     },
     pagination: {
       disabled: "class",

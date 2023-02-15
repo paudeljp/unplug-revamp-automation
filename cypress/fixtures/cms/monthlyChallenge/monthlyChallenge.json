@@ -2,15 +2,15 @@
   "data": [
     {
       "environment": "faker",
-      "year": "2023",
-      "month": "January",
-      "playlist": "Get Inspired"
+      "year": 2023,
+      "month": "February",
+      "playlist": "Test Automation Playlist"
     },
     {
       "environment": "main",
-      "year": "2023",
-      "month": "January",
-      "playlist": "Get Inspired"
+      "year": 2023,
+      "month": "February",
+      "playlist": "Test Automation Playlist"
     }
   ]
 }

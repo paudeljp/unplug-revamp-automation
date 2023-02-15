@@ -15,12 +15,12 @@ export function fakerObj(dataPath, string) {
       for (let index = 0; index < datas.data.length; index++) {
         if (datas.data[index].environment == string) {
           datas.data[index].title = Date.now() + " newsletter";
-          datas.data[index].start_date = `${mm}${dd}${yyyy}`;
-          datas.data[index].end_date = `${mm}${dd}${yyyy}`;
+          datas.data[index].start_date = `${mm}/${dd}/${yyyy}`;
+          datas.data[index].end_date = `${mm}/${dd}/${yyyy}`;
           datas.data[index].thumbnailImage = "../file/cms/5144490.jpg";
           datas.data[index].link = faker.internet.url();
           datas.data[index].description = faker.lorem.sentence();
-          datas.data[index].hide = false;
+          datas.data[index].hide = null;
           cy.writeFile(dataPath, datas);
         }
       }

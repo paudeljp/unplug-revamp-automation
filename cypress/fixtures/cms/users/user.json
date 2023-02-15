@@ -1,10 +1,10 @@
 {
   "data": [
     {
-      "environment": "main",
-      "email": "anil@gmail.com",
-      "username": "anil",
-      "joinDate": "02/03/2023 - 02/10/2023",
+      "environment": "faker",
+      "email": "testuser@mailinatro.com",
+      "name": "Test User",
+      "joinDate": "02/15/2023 - 02/10/2023",
       "status": "Active",
       "VIP_status": "VIP",
       "company": "admin",
@@ -12,6 +12,45 @@
       "subscription_status": "Active",
       "sessions_count_minimum": "1",
       "sessions_count_maximun": "10"
+    },
+    {
+      "environment": "main",
+      "email": "testuser@mailinatro.com",
+      "name": "Test User",
+      "joinDate": "02/15/2023 - 02/15/2023",
+      "status": "Active",
+      "VIP_status": null,
+      "company": null,
+      "platform": null,
+      "subscription_status": null,
+      "sessions_count_minimum": null,
+      "sessions_count_maximum": null
+    },
+    {
+      "environment": "validFilter",
+      "email": "testuser@mailinatro.com",
+      "name": "Test User",
+      "joinDate": "02/15/2023 - 02/15/2023",
+      "status": "Active",
+      "VIP_status": null,
+      "company": null,
+      "platform": null,
+      "subscription_status": null,
+      "sessions_count_minimum": null,
+      "sessions_count_maximum": null
+    },
+    {
+      "environment": "invalidFilter",
+      "email": "testuser@mailinatro.com",
+      "name": "Test User",
+      "joinDate": "02/15/2023 - 02/10/2023",
+      "status": "Active",
+      "VIP_status": "VIP",
+      "company": "admin",
+      "platform": "Apple",
+      "subscription_status": "Active",
+      "sessions_count_minimum": "1",
+      "sessions_count_maximum": "10"
     }
   ]
 }

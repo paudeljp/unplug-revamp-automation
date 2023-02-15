@@ -54,7 +54,7 @@ export function button() {
     xpath: {
       mainTab: "ul#sidebarnav li a span",
       addNew: "div.customize-input a",
-      save: "form div button#addTimerSoundBtn",
+      save: "button[id='addTimerSoundBtn']",
       cancel: "form  a.btn",
       delete: "tbody tr td button",
       update: "form div.position-relative button.btn",
@@ -62,6 +62,7 @@ export function button() {
       replaceThisTimerSoundBtn: "form div.position-relative button.btn",
       confirm: "div.modal-footer button:first-child",
       close: "div.modal-footer button:last-child",
+      tableData: "tbody tr td:nth-child(2) a",
     },
     value: {
       mainTab: "Timer Sounds",
@@ -82,7 +83,7 @@ export function createTimerSoundPageForm() {
   return {
     field: {
       title: "input",
-      position: "inputfileUpload",
+      position: "input",
       uploadTimerVideo: "fileUpload",
     },
     status: {
@@ -139,7 +140,7 @@ export function editTimerSoundPageForm() {
   return {
     field: {
       title: "input",
-      position: "inputfileUpload",
+      position: "input",
       uploadTimerVideo: "fileUpload",
     },
     status: {
@@ -158,8 +159,8 @@ export function editTimerSoundPageForm() {
         readOnly: false,
       },
       uploadTimerVideo: {
-        isPresent: true,
-        visibility: true,
+        isPresent: false,
+        visibility: false,
         disabled: false,
         compare: false,
         readOnly: false,
@@ -209,8 +210,7 @@ export function tableBody() {
       "No Records found.",
     ],
     columns: {
-      2: "Title",
-      3: "File",
+      2: "title",
     },
     pagination: {
       disabled: "class",

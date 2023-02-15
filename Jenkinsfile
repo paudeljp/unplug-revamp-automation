@@ -21,7 +21,7 @@ pipeline {
 
     }
     stage("Parallel  Testing") {
-      // parallel execution of test happens in this stage
+       
       parallel {
         stage("CI Machine #1") {
           steps {

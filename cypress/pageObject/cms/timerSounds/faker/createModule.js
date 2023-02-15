@@ -9,10 +9,7 @@ export function fakerObj(dataPath, string) {
     for (let index = 0; index < datas.data.length; index++) {
       if (datas.data[index].environment == string) {
         datas.data[index].title = Date.now() + " timer sound";
-        datas.data[index].position = faker.datatype.number({
-          min: 10,
-          max: 99,
-        });
+        datas.data[index].position = "1";
         datas.data[index].uploadTimerVideo =
           "../file/cms/file_example_WAV_1MG.wav";
         cy.writeFile(dataPath, datas);

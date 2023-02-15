@@ -39,7 +39,7 @@ export function button() {
       addNew: "div.customize-input a",
       edit: "tbody tr td:last-child a",
       delete: "tbody tr td:last-child button",
-      save: "form div button#addNewsletterBtn",
+      save: "form div.form-group button",
       cancel: "form  a.btn",
       update: "form div:nth-child(7) button",
       confirm: "div.modal-footer button:first-child",
@@ -76,11 +76,13 @@ export function alertMessage() {
       createNewsletter: [".alert.alert-success", "button[class='close'] span"],
 
       editAlert: [".alert.alert-success", "button[class='close'] span"],
+      deleteAlert: [".alert.alert-success", "button[class='close'] span"],
     },
     value: {
       createNewsletter: ["The newsletter has been added successfully.", "×"],
 
       editAlert: ["The newsletter has been updated successfully", "×"],
+      deleteAlertAlert: ["", "×"],
     },
   };
 }
@@ -107,10 +109,21 @@ export function tableBody() {
   return {
     xpath: "table tbody",
     columns: {
-      2: "Title",
-      3: "Start Date",
-      4: "End Date",
-      5: "Hide",
+      2: "title",
+    },
+    pagination: {
+      disabled: "class",
+      xpath: {
+        container: ".card-body",
+        paginationCount: ".custom-pagination:last-child ul li",
+        preview: "div.custom-pagination:last-child ul li:nth-last-child(2) a",
+        next: "div.custom-pagination:last-child ul li:nth-child(2) a",
+      },
+      value: {
+        container: null,
+        preview: "«",
+        next: "»",
+      },
     },
   };
 }

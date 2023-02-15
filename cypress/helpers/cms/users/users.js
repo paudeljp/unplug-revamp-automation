@@ -2,17 +2,15 @@ export function filterForm() {
   return {
     field: {
       email: "input",
-      username: "input",
+      name: "input",
       joinDate: "input",
       status: "selectOption",
-      VIP_status: "selectOption",
+      vip_status: "selectOption",
       company: "selectOption",
-      platform: "selectOption",
-      subscription_status: "selectOption",
-      sessions_count: {
-        minimum: "input",
-        maximun: "input",
-      },
+      platform: "dropDownWithSearch",
+      subscription_status: "dropDownWithSearch",
+      sessions_count_minimum: "input",
+      sessions_count_maximum: "input",
     },
     status: {
       email: {
@@ -22,7 +20,7 @@ export function filterForm() {
         compare: false,
         readOnly: false,
       },
-      password: {
+      name: {
         isPresent: true,
         visibility: true,
         disabled: false,
@@ -43,7 +41,7 @@ export function filterForm() {
         compare: false,
         readOnly: false,
       },
-      VIP_status: {
+      vip_status: {
         isPresent: true,
         visibility: true,
         disabled: false,
@@ -71,37 +69,41 @@ export function filterForm() {
         compare: false,
         readOnly: false,
       },
-      sessions_count: {
-        minimum: {
-          isPresent: true,
-          visibility: true,
-          disabled: false,
-          compare: false,
-          readOnly: false,
-        },
-        maximun: {
-          isPresent: true,
-          visibility: true,
-          disabled: false,
-          compare: false,
-          readOnly: false,
-        },
+
+      sessions_count_minimum: {
+        isPresent: true,
+        visibility: true,
+        disabled: false,
+        compare: false,
+        readOnly: false,
+      },
+      sessions_count_maximum: {
+        isPresent: true,
+        visibility: true,
+        disabled: false,
+        compare: false,
+        readOnly: false,
       },
     },
     xpath: {
-      email: ".card form  input[name='email']",
-      username: ".card form  input[name='name']",
-      joinDate: ".card form  input[name='date_range']",
-      status: ".card form select[name='status']",
-      VIP_status: ".card form select[name='vip']",
-      company: ".card form select[name='team_name']",
-      platform: ".card form input[placeholder='Select Platform']",
-      subscription_status:
-        ".card form input[placeholder='Select Subscription Status']",
-      sessions_count: {
-        minimum: ".card form input[name='session_min']",
-        maximun: ".card form input[name='session_max']",
-      },
+      email: "input[name='email']",
+      name: "input[name='name']",
+      joinDate: "input[name='date_range']",
+      status: "select[name='status']",
+      vip_status: "select[name='vip']",
+      company: "select[name='team_name']",
+      platform: [
+        "input[placeholder='Select Platform']",
+        "input[placeholder='Select Platform']",
+        "ul.select2-results__options li",
+      ],
+      subscription_status: [
+        "input[placeholder='Select Subscription Status']",
+        "input[placeholder='Select Subscription Status']",
+        "ul.select2-results__options li",
+      ],
+      sessions_count_minimum: "input[name='session_min']",
+      sessions_count_maximum: "input[name='session_max']",
     },
   };
 }
@@ -115,23 +117,15 @@ export function profilePage() {
         last_name: "input",
         email: "input",
         contact_number: "input",
-        image: "uploadFile",
-        status: {
-          active: "radio",
-          inactive: "radio",
-        },
+        image: "fileUpload",
+        status: "checkBox",
         date_of_birth: "input",
         nickname: "input",
-        vip_status: {
-          yes: "radio",
-          no: "radio",
-        },
-        vip_status_expiry: "input",
-        billing_account: {
-          VHX_ID: "input",
-          Active_VHX_Product: "radio",
-          Sync_to_VHX: "radio",
-        },
+        vip_status: "checkBox",
+        vip_stvips_expiry: "input",
+        VHX_ID: "input",
+        Active_VHX_Product: "checkBox",
+        Sync_to_VHX: "checkBox",
         password: "input",
       },
       status: {
@@ -171,20 +165,11 @@ export function profilePage() {
           readOnly: false,
         },
         status: {
-          active: {
-            isPresent: true,
-            visibility: true,
-            disabled: false,
-            compare: false,
-            readOnly: false,
-          },
-          inactive: {
-            isPresent: true,
-            visibility: true,
-            disabled: false,
-            compare: false,
-            readOnly: false,
-          },
+          isPresent: true,
+          visibility: true,
+          disabled: false,
+          compare: false,
+          readOnly: false,
         },
         date_of_birth: {
           isPresent: true,
@@ -201,51 +186,41 @@ export function profilePage() {
           readOnly: false,
         },
         vip_status: {
-          yes: {
-            isPresent: true,
-            visibility: true,
-            disabled: false,
-            compare: false,
-            readOnly: false,
-          },
-          no: {
-            isPresent: true,
-            visibility: true,
-            disabled: false,
-            compare: false,
-            readOnly: false,
-          },
+          isPresent: true,
+          visibility: true,
+          disabled: false,
+          compare: false,
         },
-        vip_status_expiry: {
+        vip_stvips_expiry: {
           isPresent: true,
           visibility: true,
           disabled: false,
           compare: false,
           readOnly: false,
         },
-        billing_account: {
-          VHX_ID: {
-            isPresent: true,
-            visibility: true,
-            disabled: false,
-            compare: false,
-            readOnly: false,
-          },
-          Active_VHX_Product: {
-            isPresent: true,
-            visibility: true,
-            disabled: false,
-            compare: false,
-            readOnly: false,
-          },
-          Sync_to_VHX: {
-            isPresent: true,
-            visibility: true,
-            disabled: false,
-            compare: false,
-            readOnly: false,
-          },
+
+        VHX_ID: {
+          isPresent: true,
+          visibility: true,
+          disabled: false,
+          compare: false,
+          readOnly: false,
         },
+        Active_VHX_Product: {
+          isPresent: true,
+          visibility: true,
+          disabled: false,
+          compare: false,
+          readOnly: false,
+        },
+        Sync_to_VHX: {
+          isPresent: true,
+          visibility: true,
+          disabled: false,
+          compare: false,
+          readOnly: false,
+        },
+
         password: {
           isPresent: true,
           visibility: true,
@@ -260,24 +235,14 @@ export function profilePage() {
         email: "input[name='email']",
         contact_number: "input[name='contactNumber']",
         image: "input[name='image']",
-        status: {
-          active:
-            "form div:nth-child(4) div:nth-child(2) label:first-child input",
-          inactive:
-            "form div:nth-child(4) div:nth-child(2) label:last-child input",
-        },
+        status: "input[name='is_active']",
         date_of_birth: "input[name='dob']",
         nickname: "input[name='nickname']",
-        vip_status: {
-          yes: "form div:nth-child(6) div:first-child label:first-child input",
-          no: "form div:nth-child(6) div:first-child label:last-child input",
-        },
-        vip_status_expiry: "input[name='vip_expire']",
-        billing_account: {
-          VHX_ID: "input[name='vhx_id']",
-          Active_VHX_Product: "input[name='active_vhx_product']",
-          Sync_to_VHX: "input[name='sync_to_vhx']",
-        },
+        vip_status: "input[name='is_vip']",
+        vip_stvips_expiry: "input[name='vip_expire']",
+        VHX_ID: "input[name='vhx_id']",
+        Active_VHX_Product: "input[name='active_vhx_product']",
+        Sync_to_VHX: "input[name='sync_to_vhx']",
         password: "input[name='password']",
       },
       validation: {
@@ -286,22 +251,6 @@ export function profilePage() {
         email: [{}],
         contact_number: [{}],
         image: [{}],
-        status: {
-          active: [{}],
-          inactive: [{}],
-        },
-        date_of_birth: [{}],
-        nickname: [{}],
-        vip_status: {
-          yes: [{}],
-          no: [{}],
-        },
-        vip_status_expiry: [{}],
-        billing_account: {
-          VHX_ID: [{}],
-          Active_VHX_Product: [{}],
-          Sync_to_VHX: [{}],
-        },
         password: [{}],
       },
     },
@@ -386,6 +335,7 @@ export function button() {
       journals: "ul.nav li a",
       comments: "ul.nav li a",
       logs: "ul.nav li a",
+      tableData: "tbody tr td:nth-child(2) a",
     },
     value: {
       mainTab: "Users",
@@ -444,17 +394,18 @@ export function tableHead() {
         "Name",
         "Email",
         "VIP Status",
-        "VIP Exprry Date",
+        "VIP Expiry Date",
         "Platform",
         "Subscription",
         "Sessions",
         "Streak",
         "Last Session Date",
         "Last Logged In Date",
-        "Statys",
+        "Status",
         "Joined Date",
         "Action",
       ],
+
       sessionTable: ["Video", "Duration", "Date and Time", "Action"],
       journalTable: ["SN", "Grateful", "For", "Notes", "Last", "Update Date"],
       commentTable: ["SN", "Video", "Comment", "Date", "Action"],
@@ -480,8 +431,8 @@ export function tableBody() {
       "No Records found.",
     ],
     columns: {
-      2: "Name",
-      3: "Email",
+      2: "name",
+      3: "email",
     },
     pagination: {
       disabled: "class",

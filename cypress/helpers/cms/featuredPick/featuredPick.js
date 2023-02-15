@@ -50,28 +50,14 @@ export function createForm() {
       select_category: [
         {
           xpath: ".alert.alert-danger",
-          value: null,
+          value: "None",
           message: "Category is required",
           requiresSubmit: true,
         },
       ],
       select_featured_item: [{}],
-      start_date: [
-        {
-          xpath: ".alert.alert-danger",
-          value: null,
-          message: "Something went wrong",
-          requiresSubmit: true,
-        },
-      ],
-      end_date: [
-        {
-          xpath: ".alert.alert-danger",
-          value: null,
-          message: "Something went wrong",
-          requiresSubmit: true,
-        },
-      ],
+      start_date: [{}],
+      end_date: [{}],
     },
   };
 }

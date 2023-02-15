@@ -18,6 +18,17 @@ export function fakerObj(dataPath, string) {
     "December",
   ];
 
+  const playlist = [
+    "Get Inspired",
+    "Healthy Eating",
+    "Peace in the Pandemic",
+    "Good Vibrations",
+    "Healthy Mind",
+    "Relax & Recharge",
+  ];
+
+  let yyyy = new Date().getFullYear();
+
   cy.checkAndReadFile(dataPath, (err, datas) => {
     if (err) {
       return console.error(err);
@@ -26,9 +37,10 @@ export function fakerObj(dataPath, string) {
     .then((datas) => {
       for (let index = 0; index < datas.data.length; index++) {
         if (datas.data[index].environment == string) {
-          datas.data[index].year = new Date().getFullYear();
-          datas.data[index].month = monthNames[d.getMonth()];
-          datas.data[index].playlist = "Get Inspired";
+          datas.data[index].year = `${yyyy} `;
+          datas.data[index].month =
+            monthNames[Math.floor(Math.random() * monthNames.length)];
+          datas.data[index].playlist = "Test Automation Playlist";
           cy.writeFile(dataPath, datas);
         }
       }
